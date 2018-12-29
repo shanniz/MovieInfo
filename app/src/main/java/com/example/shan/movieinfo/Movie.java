@@ -10,10 +10,20 @@ public class Movie {
     private String director;
     public static List<Movie> items = new ArrayList<>();
 
+    public Movie(String title, Integer year) {
+        this.title = title;
+        this.year = year;
+    }
+    public Movie(String title, Integer year, String director) {
+        this.title = title;
+        this.year = year;
+        this.director = director;
+    }
+
     public static void generate() {
         items.add(new Movie("The Matrix", 1999, "Lana Wachowski, Lilly Wachowski"));
-        items.add(new Movie("The Godfather ", 1972, "someone"));
-        items.add(new Movie("The Godfather: Part II ", 1974, "someone"));
+        items.add(new Movie("The Godfather ", 1972, "Francis Ford Coppola"));
+        items.add(new Movie("The Godfather: Part II ", 1974, "Francis Ford Coppola"));
     }
 
     public String getTitle() {
@@ -40,13 +50,5 @@ public class Movie {
         this.director = director;
     }
 
-    public Movie(String title, Integer year) {
-        this.title = title;
-        this.year = year;
-    }
-    public Movie(String title, Integer year, String director) {
-        this.title = title;
-        this.year = year;
-        this.director = director;
-    }
+
 }

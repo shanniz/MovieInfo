@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 
 public class MovieListFragment extends ListFragment {
-    MovieAdapter adapter;
+        MovieAdapter adapter;
 
     static interface MovieListListener {
         void itemClicked(int pos);
