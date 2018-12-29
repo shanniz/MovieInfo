@@ -56,15 +56,13 @@ public class MovieListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         Movie item = Movie.items.get(position);
-
-        Toast.makeText(getActivity(), item.getTitle(), Toast.LENGTH_SHORT).show();
-
+        //Toast.makeText(getActivity(), item.getTitle(), Toast.LENGTH_SHORT).show();
         if (listener != null) {
             listener.itemClicked(position);
         }
     }
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // handle item selection
         switch (item.getItemId()) {
@@ -74,6 +72,6 @@ public class MovieListFragment extends ListFragment {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
+    }*/
 
 }

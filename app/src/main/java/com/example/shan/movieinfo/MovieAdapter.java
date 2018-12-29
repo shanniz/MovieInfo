@@ -47,13 +47,9 @@ public class MovieAdapter extends BaseAdapter {
 
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.movie_list_item, null);
-
             holder = new ViewHolder();
             holder.tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
             holder.tvYear = (TextView) convertView.findViewById(R.id.tvYear);
-            holder.tvDirector = (TextView) convertView.findViewById(R.id.tvDirector);
-
-
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -61,7 +57,7 @@ public class MovieAdapter extends BaseAdapter {
 
         holder.tvTitle.setText(movie.getTitle());
         holder.tvYear.setText(movie.getYear().toString());
-        holder.tvYear.setText(movie.getDirector().toString());
+        //holder.tvDirector.setText(movie.getDirector().toString());
 
         return convertView;
     }
